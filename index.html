@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webmasters small projects</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<body>
+    
+<div id="app">
+    <h1>Bulk Domain Search</h1>
+    <div class="domain-wrapper">
+      <div class="domain-wrapper__item">
+        <h3>1. Enter the domain name you wanted</h3>
+        <input type="text" class="domain-wrapper__item__search-input" v-model="searchinput" />
+      </div>
+      <div class="domain-wrapper__item">
+        <h3>2. Choose TLDs to search for</h3>
+        <ul class="domain-wrapper__item--domains">
+          <li v-for="domain in domains" v-bind:class="{active:domain.state}">
+            <input type="checkbox" v-model="domain.state" :id="domain.name" v-on:change="select(domain)"/>
+            <label :for="domain.name">{{ domain.name }}</label>
+          </li>
+        </ul>
+        <div class="domain-wrapper__item--selected">
+          <h3>3. Check your order</h3>
+          <ul>
+            <li v-for='select in selected'>
+              <selected-fruit v-bind:select="select" v-bind:searchinput="searchinput" v-if="select.state"></selected-fruit>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <button id="submit">Search</button>
+    </div>
+  </div>
+<script src="script.js"></script>    
+</body>
+</html>

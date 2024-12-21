@@ -1,0 +1,102 @@
+html, body {
+    margin: 0;
+    min-height: calc(100% - 60px);
+    font-family: sans-serif;
+    background: #e5eaee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+  }
+  h1, h3, p {
+    margin: 0;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  #app {
+    max-width: 540px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  #app h1 {
+    background: #0000FF;
+    text-align: center;
+    color: #fff;
+    padding: 20px 0;
+  }
+  #app .domain-wrapper {
+    padding: 30px 50px 50px 50px;
+  }
+  #app .domain-wrapper__item {
+    margin-top: 20px;
+  }
+  #app .domain-wrapper__item h3 {
+    color: #0000FF;
+  }
+  #app .domain-wrapper__item__search-input {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 20px 0;
+    line-height: 24px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #d1d1d1;
+    outline: none;
+  }
+  #app .domain-wrapper__item--domains li {
+    display: inline-block;
+    margin: 15px 15px 0 0;
+  }
+  #app .domain-wrapper__item--domains li.active {
+    font-weight: 600;
+  }
+  #app .domain-wrapper__item--selected {
+    margin-top: 30px;
+  }
+  #app .domain-wrapper__item--selected ul {
+    min-height: 30px;
+  }
+  #app .domain-wrapper__item--selected ul li {
+    padding: 10px 20px;
+    overflow: hidden;
+    background: #f5f5f5;
+  }
+  #app .domain-wrapper__item--selected ul li:hover {
+    background: #eeeeee;
+  }
+  #app .domain-wrapper__item--selected ul li div {
+    width: 100%;
+  }
+  #app .domain-wrapper__item--selected ul li div p {
+    width: 90%;
+    float: left;
+  }
+  #app .domain-wrapper__item--selected ul li div i {
+    width: 10%;
+    float: right;
+    text-align: right;
+    cursor: pointer;
+    color: #0000FF;
+  }
+  #app .domain-wrapper #submit {
+    width: 100%;
+    margin-top: 20px;
+    border: none;
+    padding: 15px 20px;
+    background: #0000FF;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    transition: 0.1s;
+  }
+  #app .domain-wrapper #submit:hover {
+    background: #0000FF;
+    color: #fff;
+  }
+  
